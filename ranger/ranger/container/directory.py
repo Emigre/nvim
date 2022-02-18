@@ -84,11 +84,14 @@ def walklevel(some_dir, level):
     some_dir = some_dir.rstrip(os.path.sep)
     followlinks = True if level > 0 else False
     assert os.path.isdir(some_dir)
+    max_depth = 1  # max number of folder recursed
     num_sep = some_dir.count(os.path.sep)
     for root, dirs, files in os.walk(some_dir, followlinks=followlinks):
         yield root, dirs, files
         num_sep_this = root.count(os.path.sep)
         if level != -1 and num_sep + level <= num_sep_this:
+            del dirs[:]
+        if num_sep_this - num_sep > max_depth - 1:
             del dirs[:]
 
 
