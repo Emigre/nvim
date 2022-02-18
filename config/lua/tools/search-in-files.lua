@@ -8,7 +8,7 @@ vim.cmd [[
       echo 'No search input'
       return
     endif
-    let grep_command = 'grep --ignore-case --exclude-dir={.git,node_modules,Pods,coverage,docs,obj} --fixed-strings --files-with-matches --null --recursive'
+    let grep_command = 'grep --binary-files=without-match --ignore-case --exclude-dir={.git,node_modules,Pods,coverage,docs,obj} --fixed-strings --files-with-matches --null --recursive'
     let error_file = tempname()
     let pattern = substitute(join(a:000, ' '), "\"", '\\\"', "g")
     let search = "\"" . pattern . "\""
