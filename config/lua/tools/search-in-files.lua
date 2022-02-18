@@ -12,7 +12,7 @@ vim.cmd [[
     let error_file = tempname()
     let pattern = substitute(join(a:000, ' '), "\"", '\\\"', "g")
     let search = "\"" . pattern . "\""
-    silent exe '!' . grep_command . " " . search . " . | xargs -0 file | sed 's/:/:1:/' > " . error_file
+    silent exe '!' . grep_command . " " . search . " . | xargs -0 file | sed 's/^\\.\\///' | sed 's/:/:1:/' > " . error_file
     set errorformat=%f:%l:%m
     exe "cg " . error_file
     botright cope
