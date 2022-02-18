@@ -35,7 +35,7 @@ vim.cmd [[
   function! OpenRangerIn(path, edit_cmd)
     " temporary file, TODO set a better file name ?
     let choice_file_path = '/tmp/chosenfile'
-    let ranger_command = '~/ranger/ranger.py'
+    let ranger_command = '$HOME/nvim/ranger/ranger.py'
     let currentPath = expand(a:path)
     let rangerCallback = { 'name': 'ranger', 'edit_cmd': a:edit_cmd }
 
