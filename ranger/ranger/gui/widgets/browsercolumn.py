@@ -893,6 +893,9 @@ class BrowserColumn(Pager):  # pylint: disable=too-many-instance-attributes
             this_color.append('link')
             this_color.append(drawn.exists and 'good' or 'bad')
 
+        if re.search('(\.js|\.ts|\.py|\.c|\.cpp|\.h|\.hpp|\.rs|\.hs|\.lua)$', str(drawn)) != None:
+            this_color.append('source_code')
+
         return this_color
 
     def _get_scroll_begin(self):  # pylint: disable=too-many-return-statements

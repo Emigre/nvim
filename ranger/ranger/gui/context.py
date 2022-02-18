@@ -11,6 +11,7 @@ CONTEXT_KEYS = [
     'active_pane', 'inactive_pane',
     'directory', 'file', 'hostname',
     'executable', 'media', 'link', 'fifo', 'socket', 'device',
+    'source_code',
     'video', 'audio', 'image', 'media', 'document', 'container',
     'selected', 'empty', 'main_column', 'message', 'background',
     'good', 'bad',
