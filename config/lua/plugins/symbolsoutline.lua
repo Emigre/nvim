@@ -9,7 +9,7 @@ vim.cmd [[
 ]]
 
 vim.g.symbols_outline = {
-  width = 60,
+  width = 80,
   relative_width = false,
   auto_preview = true,
   keymaps = {

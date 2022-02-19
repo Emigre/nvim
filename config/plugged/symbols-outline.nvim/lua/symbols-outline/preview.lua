@@ -29,7 +29,7 @@ end
 
 local function get_offset()
 	local outline_winnr = main.state.outline_win
-	local width = 53
+	local width = 83
 	local height = 0
 
 	if config.has_numbers() then
@@ -165,7 +165,7 @@ local function show_preview()
 		local offsets = get_offset()
 		state.preview_win = vim.api.nvim_open_win(state.preview_buf, false, {
 			relative = "win",
-			width = 50,
+			width = 80,
 			height = get_height(),
 			bufpos = { 0, 0 },
 			row = offsets[1],
