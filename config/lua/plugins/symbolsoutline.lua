@@ -8,6 +8,20 @@ vim.cmd [[
   au FileType Outline noremap <silent> <buffer> l <Nop>
 ]]
 
+vim.cmd [[
+  function! SynGroup()
+      let l:s = synID(line('.'), col('.'), 1)
+      echo synIDattr(l:s, 'name') . ' -> ' . synIDattr(synIDtrans(l:s), 'name')
+  endfun
+
+  hi SymModule guifg=#ff99cc
+  hi SymType guifg=#99ff99
+  " hi SymFn guifg=#009900
+  hi SymObj guifg=#009900
+  hi SymVar guifg=#666666
+  hi SymOperator guifg=#009900
+]]
+
 vim.g.symbols_outline = {
   width = 80,
   relative_width = false,
@@ -17,31 +31,36 @@ vim.g.symbols_outline = {
     show_help = "§"
   },
   symbols = {
-    File = {icon = "[file]", hl = "TSURI"},
-    Module = {icon = "[modul]", hl = "TSNamespace"},
-    Namespace = {icon = "[nmesp]", hl = "TSNamespace"},
-    Package = {icon = "[pack]", hl = "TSNamespace"},
-    Class = {icon = "(( CLASS ))", hl = "TSType"},
-    Method = {icon = ">", hl = "TSMethod"},
-    Property = {icon = "[prop]", hl = "TSMethod"},
-    Field = {icon = "[field]", hl = "TSField"},
-    Constructor = {icon = "[constr]", hl = "TSConstructor"},
-    Enum = {icon = "[enum]", hl = "TSType"},
-    Interface = {icon = "(( INTERFACE ))", hl = "TSType"},
-    Function = {icon = ">", hl = "TSFunction"},
-    Variable = {icon = "(var)", hl = "TSConstant"},
-    Constant = {icon = "(const)", hl = "TSConstant"},
-    String = {icon = "[str]", hl = "TSString"},
-    Number = {icon = "[num]", hl = "TSNumber"},
-    Boolean = {icon = "[bool]", hl = "TSBoolean"},
-    Array = {icon = "[arr]", hl = "TSConstant"},
-    Object = {icon = "[obj]", hl = "TSType"},
-    Key = {icon = "[key]", hl = "TSType"},
-    Null = {icon = "[null]", hl = "TSType"},
-    EnumMember = {icon = "[enmitem]", hl = "TSField"},
-    Struct = {icon = "[stru]", hl = "TSType"},
-    Event = {icon = "[evt]", hl = "TSType"},
-    Operator = {icon = "[op]", hl = "TSOperator"},
-    TypeParameter = {icon = "[typ]", hl = "TSParameter"}
+    File = {icon = "⊚", hl = "SymModule"},
+    Module = {icon = "⊙", hl = "SymModule"},
+    Namespace = {icon = "⊛", hl = "SymModule"},
+    Package = {icon = "⊡", hl = "SymModule"},
+
+    Interface = {icon = "<Ι>", hl = "SymType"},
+    Class = {icon = "<Ⅽ>", hl = "SymType"},
+
+    Method = {icon = "λ", hl = "Function"},
+    Constructor = {icon = "λ", hl = "Function"},
+    Function = {icon = "λ", hl = "Function"},
+
+    Object = {icon = "•", hl = "SymObj"},
+    Array = {icon = "•", hl = "SymObj"},
+    Struct = {icon = "•", hl = "SymObj"},
+    Enum = {icon = "•", hl = "SymObj"},
+
+    Field = {icon = "⁃", hl = "SymVar"},
+    Variable = {icon = "⁃", hl = "SymVar"},
+    Property = {icon = "⁃", hl = "SymVar"},
+    Constant = {icon = "⁃", hl = "SymVar"},
+    String = {icon = "⁃", hl = "SymVar"},
+    Number = {icon = "⁃", hl = "SymVar"},
+    Boolean = {icon = "⁃", hl = "SymVar"},
+    Key = {icon = "⁃", hl = "SymVar"},
+    Null = {icon = "⁃", hl = "SymVar"},
+    EnumMember = {icon = "⁃", hl = "SymVar"},
+
+    Event = {icon = "%", hl = "symOperator"},
+    Operator = {icon = "%", hl = "symOperator"},
+    TypeParameter = {icon = "%", hl = "symOperator"}
   }
 }
