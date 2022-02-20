@@ -27,7 +27,7 @@ vim.g.symbols_outline = {
   relative_width = false,
   auto_preview = true,
   keymaps = {
-    goto_location = "l",
+    goto_location = {"l", "<Cr>"},
     show_help = "§"
   },
   symbols = {
