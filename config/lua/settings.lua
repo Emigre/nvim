@@ -5,6 +5,7 @@ vim.opt.completeopt = 'menuone,noinsert,noselect'
 vim.opt.errorbells = false
 vim.opt.expandtab = true -- use spaces for tabs in insert mode
 vim.opt.foldenable = false
+vim.opt.foldmethod = 'indent'
 vim.opt.hlsearch = false -- do not highlight searches by default
 vim.opt.ignorecase = true -- ignore case when searching
 vim.opt.incsearch = true
