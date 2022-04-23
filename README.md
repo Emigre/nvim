@@ -5,11 +5,12 @@
 ### Basic
 
 ```
-:h        (plus keyword) shows help
+:h         (plus keyword) shows help
+:f         show file name
 
-:!        (plus command) execute external shell command
-:r        (plus program) read external program output into file
-:r!       (plus command) read external shell command output into file
+:!         (plus command) execute external shell command
+:r         (plus program) read external program output into file
+:r!        (plus command) read external shell command output into file
 
 :          (plus line number) jump to that line
 g          (plus line number) jump to that line
@@ -50,20 +51,13 @@ U          go to previous empty paragraph, same as {
 ~          switch case
 ```
 
-### Buffer navigation
-
-```
-h          previous buffer
-l          next buffer
-q          close current buffer
-Q          close the other buffers
-```
-
 ### Jumps
 
 ```
 <c-i>      go forward in the jumplist
 <c-o>      go back in the jumplist
+
+<c-6>      switch to alternate file, equivalent to c-^
 
 g,         go to newer position in change list
 g;         go to older position in change list
@@ -75,9 +69,42 @@ g;         go to older position in change list
            should be deleted to remove the jumps permanently
 ```
 
-### Windows
+### Buffers
 
 ```
+:ls        list all buffers
+
+:b         (plus number) display the selected buffer
+:bn        go to next buffer
+:bp        go to previous buffer
+
+:bd        deletes current buffer, will fail if unsaved
+:bd!       deletes current buffer, forced
+
+h          previous buffer
+l          next buffer
+q          close current buffer
+Q          close the other buffers
+
+```
+
+### Windows and tabs
+
+Tabs contain windows, and each window is a view to a buffer
+
+```
+:tabs       list all tabs and the windows each contains
+
+:tabc       close tab
+gt          go to next tab
+gT          go to previous tab
+
+:sp         create horizontal window, accepts file name to open
+:vp         create vertical window, accepts file name to open
+
+:vert ba    edit all buffers as vertical windows
+:bo ba      edit all buffers as horizontal windows below
+
 <c-w>s      split window horizontally
 <c-w>v      split window vertically
 
