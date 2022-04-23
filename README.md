@@ -265,6 +265,13 @@ Inside Ranger:
 f          (plus text) search for text and instantly jump
 /          (plus text) search for text
 
+r          'open with' input to select a rifle opener
+
+S          open shell in current folder
+s          'shell' input to execute a shell command
+!          'shell' input to execute a shell command
+!          'shell' input with the selected file macro appended
+
 o          unfold a level of parent folders (fix)
 O          re-fold the parent folders (fix)
 
@@ -274,7 +281,6 @@ S          open shell
 :touch     (plus filename) touch file
 
 I          rename file
-r          'open with' menu
 
 <space>    select files
 dd         cut selected files
@@ -300,7 +306,7 @@ pp         paste files
 
 m          (plus letter) bookmark location
 `          show bookmarks
-`          (plus eletter) jump to bookmark
+`          (plus letter) jump to bookmark
 
 gh         go to home folder
 ```

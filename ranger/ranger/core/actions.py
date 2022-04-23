@@ -426,7 +426,7 @@ class Actions(  # pylint: disable=too-many-instance-attributes,too-many-public-m
         mode = kw['mode'] if 'mode' in kw else 0
 
         # ranger can act as a file chooser when running with --choosefile=...
-        if mode == 0 and 'label' not in kw:
+        if mode == 0 and 'label' not in kw and 'app' not in kw:
             if ranger.args.choosefile:
                 with open(ranger.args.choosefile, 'w') as fobj:
                     fobj.write(self.fm.thisfile.path)
@@ -475,6 +475,7 @@ class Actions(  # pylint: disable=too-many-instance-attributes,too-many-public-m
             else:
                 raise
         finally:
+            self.ui.redraw_window()
             self.signal_emit('execute.after')
 
     # --------------------------
