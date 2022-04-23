@@ -21,6 +21,7 @@ vim.fn["plug#"]('Yggdroot/indentLine')
 -- Git integration
 vim.fn["plug#"]('airblade/vim-gitgutter')
 vim.fn["plug#"]('tpope/vim-fugitive')
+vim.fn["plug#"]('tpope/vim-rhubarb')
 vim.fn["plug#"]('tommcdo/vim-fugitive-blame-ext')
 
 -- Editorconfig integration
