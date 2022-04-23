@@ -211,6 +211,7 @@ zm          fold both files completely
 # functions
 WhatIsThisColour
 WhatIsThisSyntax
+WhatIsThisFile
 ShowAllColours
 
 # commands

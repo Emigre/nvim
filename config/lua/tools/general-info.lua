@@ -18,3 +18,9 @@ vim.cmd [[
     so $VIMRUNTIME/syntax/hitest.vim
   endf
 ]]
+
+vim.cmd [[
+  fun! WhatIsThisFile()
+    set filetype?
+  endf
+]]
