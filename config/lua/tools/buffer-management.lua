@@ -58,7 +58,7 @@ vim.cmd [[
   fun! Bclose(bang, buffer)
     " special case for fugitive diff window
     if matchstr(expand('%'), '^fugitive:\/\/') != ''
-      exe 'wincmd c'
+      exe 'bd'
       retu
     endif
 
