@@ -254,6 +254,10 @@ RetabIndent
 
 ## Ranger
 
+[Ranger repo](https://github.com/ranger/ranger)
+
+[Ranger manpage](https://ranger.github.io/ranger.1.html)
+
 ```
 <leader>f  open ranger in base path
 <leader>F  open ranger in working directory
@@ -272,14 +276,10 @@ S          open shell in current folder
 !          'shell' input to execute a shell command
 !          'shell' input with the selected file macro appended
 
-o          unfold a level of parent folders (fix)
-O          re-fold the parent folders (fix)
+o          unfold a level of parent folders
+O          re-fold the parent folders
 
-!          execute shell command
-#          execute shell command, paginated
-S          open shell
-:touch     (plus filename) touch file
-
+T          (plus filename) touch file
 I          rename file
 
 <space>    select files
@@ -307,6 +307,12 @@ pp         paste files
 m          (plus letter) bookmark location
 `          show bookmarks
 `          (plus letter) jump to bookmark
+
+<c-h>      toggle display of hidden files
+
+ut         undo all tags
+ud         clear the copy buffer
+uv         clear the selection
 
 gh         go to home folder
 ```
