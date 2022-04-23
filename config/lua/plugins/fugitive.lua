@@ -16,8 +16,8 @@ map('n', '<leader>g', ':Git blame<CR>', { noremap = true })
 
 -- close blame window with q
 vim.cmd [[
-  au FileType fugitiveblame nnoremap <silent> <buffer> q <C-w>c
-  au FileType fugitiveblame nnoremap <silent> <buffer> <leader>g <C-w>c
+  au FileType fugitiveblame nmap <silent> <buffer> q gq
+  au FileType fugitiveblame nmap <silent> <buffer> <leader>g gq
 ]]
 
 -- disable buffer navigation inside of the blame window
