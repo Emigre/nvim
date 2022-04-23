@@ -267,8 +267,8 @@ f          (plus text) search for text and instantly jump
 
 r          'open with' input to select a rifle opener
 
+s          open file explorer in the current folder
 S          open shell in current folder
-s          'shell' input to execute a shell command
 !          'shell' input to execute a shell command
 !          'shell' input with the selected file macro appended
 
