@@ -231,3 +231,49 @@ RetabIndent
 <leader>f  open ranger in base path
 <leader>F  open ranger in working directory
 ```
+
+Inside Ranger:
+
+```
+f          (plus text) search for text and instantly jump
+/          (plus text) search for text
+
+o          unfold a level of parent folders (fix)
+O          re-fold the parent folders (fix)
+
+!          execute shell command
+#          execute shell command, paginated
+S          open shell
+:touch     (plus filename) touch file
+
+I          rename file
+r          'open with' menu
+
+<space>    select files
+dd         cut selected files
+yy         copy the files
+da         add files to the cut buffer
+ya         add files to the copy buffer
+pp         paste files
+
+# macros (for commands)
+%d         path of current directory
+%f         base name of current file
+%s         names of selected files
+%t         names of tagged files
+%c         paths of copied files
+
+<octal>=   changes the permissions of the file
++          (plus permission) add permission to the file
+-          (plus permission) remove permission to the file
+
+]          move to next in parent dir
+[          move to previous in parent dir
+}          traverse subdirectories
+
+m          (plus letter) bookmark location
+`          show bookmarks
+`          (plus eletter) jump to bookmark
+
+gh         go to home folder
+```
