@@ -20,7 +20,6 @@ require('plugins/jsx')
 require('plugins/markdown')
 require('plugins/neoformat')
 require('plugins/nerdcommenter')
-require('plugins/nerdtree')
 require('plugins/typescript')
 require('plugins/symbolsoutline')
 

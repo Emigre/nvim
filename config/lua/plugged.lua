@@ -12,9 +12,6 @@ vim.fn["plug#"]('tpope/vim-repeat')
 vim.fn["plug#"]('ctrlpvim/ctrlp.vim')
 vim.fn["plug#"]('simrat39/symbols-outline.nvim')
 
--- NERDTree
-vim.fn["plug#"]('scrooloose/nerdtree')
-
 -- Buffer tabs
 vim.fn["plug#"]('ap/vim-buftabline')
 
