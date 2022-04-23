@@ -32,7 +32,7 @@ def sort_by_basename(path):
 
 def sort_by_path(path):
     """returns path.path (for sorting)"""
-    return path.path
+    return path.path.replace('/', '\0')
 
 
 def sort_by_basename_icase(path):
