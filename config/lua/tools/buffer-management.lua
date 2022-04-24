@@ -21,8 +21,8 @@ vim.cmd [[
     endif
   endf
 
-  command! -bang -complete=buffer Bmoveright :call Bmove('right')
-  command! -bang -complete=buffer Bmoveleft :call Bmove('left')
+  command! -bang -complete=buffer -nargs=? Bmoveright :call Bmove('right')
+  command! -bang -complete=buffer -nargs=? Bmoveleft :call Bmove('left')
 ]]
 
 -- exclude quickfix buffer from :bn :bp

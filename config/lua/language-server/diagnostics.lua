@@ -25,21 +25,17 @@ vim.cmd [[
 ]]
 
 vim.cmd [[
-  hi! LspDiagnosticsDefaultError guifg=#767676
-  hi! LspDiagnosticsSignError guifg=#767676
-  hi! LspDiagnosticsWarning guifg=#767676
-  hi! LspDiagnosticsSignWarning guifg=#767676
-  hi! LspDiagnosticsInformation guifg=#767676
-  hi! LspDiagnosticsSignInformation guifg=#767676
-  hi! LspDiagnosticsHint guifg=#767676
-  hi! LspDiagnosticsSignHint guifg=#767676
+  hi! DiagnosticError guifg=#767676
+  hi! DiagnosticWarn guifg=#767676
+  hi! DiagnosticInfo guifg=#767676
+  hi! DiagnosticHint guifg=#767676
 
   hi! DiagnosticErrorSymbol guisp=#bc6c4c guifg=#dc8c6c
   hi! DiagnosticWarningSymbol guisp=#bc6c9c guifg=#bc8cbc
-  sign define LspDiagnosticsSignError text=░ texthl=DiagnosticErrorSymbol linehl= numhl=
-  sign define LspDiagnosticsSignWarning text=░ texthl=DiagnosticWarningSymbol linehl= numhl=
-  sign define LspDiagnosticsSignInformation text=░ texthl=DiagnosticWarningSymbol linehl= numhl=
-  sign define LspDiagnosticsSignHint text=░ texthl=DiagnosticWarningSymbol linehl= numhl=
+  sign define DiagnosticSignError text=░ texthl=DiagnosticErrorSymbol linehl= numhl=
+  sign define DiagnosticSignWarning text=░ texthl=DiagnosticWarningSymbol linehl= numhl=
+  sign define DiagnosticSignInformation text=░ texthl=DiagnosticWarningSymbol linehl= numhl=
+  sign define DiagnosticSignHint text=░ texthl=DiagnosticWarningSymbol linehl= numhl=
 ]]
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
