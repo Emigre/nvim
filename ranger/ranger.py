@@ -1,4 +1,4 @@
-#!/usr/bin/python -O
+#!/usr/bin/python3 -O
 # This file is part of ranger, the console file manager.  (coding: utf-8)
 # License: GNU GPL version 3, see the file "AUTHORS" for details.
 
